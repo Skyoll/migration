@@ -45,8 +45,6 @@ class ws_m_1607327729_perenos_opisaniya_tovara_iz_mnozhestvennogo_svoystva_v_det
     public function commit()
     {
         CModule::IncludeModule("iblock");
-        global $USER;
-        $USER->Authorize(1);
         $start = microtime(true);
         $startMemory = 0;
         $arSelect = [
@@ -111,8 +109,6 @@ class ws_m_1607327729_perenos_opisaniya_tovara_iz_mnozhestvennogo_svoystva_v_det
     public function rollback()
     {
         CModule::IncludeModule("iblock");
-        global $USER;
-        $USER->Authorize(1);
         $start = microtime(true);
         $startMemory = 0;
         $data = $this->getData();
